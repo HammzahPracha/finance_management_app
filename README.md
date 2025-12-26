@@ -4,7 +4,7 @@ A modern, feature-rich Finance Management application built with Flutter. This a
 
 ## Features
 
-- 🔐 **Authentication**: Secure login and registration with local authentication
+- 🔐 **Authentication**: Secure login and registration (Firebase Auth or Local Auth)
 - 💰 **Transaction Management**: Add, edit, and delete income/expense transactions
 - 📊 **Analytics Dashboard**: Visualize your financial data with interactive charts
 - 📈 **Charts & Graphs**: 
@@ -90,6 +90,19 @@ The project uses Hive for local storage. You need to generate the type adapters:
 flutter pub run build_runner build --delete-conflicting-outputs
 ```
 
+### 4. (Optional) Firebase Setup
+
+If you want to use Firebase Authentication:
+
+1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+2. Add your Android/iOS app to the project
+3. Download `google-services.json` (Android) and `GoogleService-Info.plist` (iOS)
+4. Place them in:
+   - Android: `android/app/google-services.json`
+   - iOS: `ios/Runner/GoogleService-Info.plist`
+5. Follow Firebase setup instructions for Flutter
+
+**Note**: The app works with local authentication by default, so Firebase setup is optional.
 
 ### 5. Create Assets Folder (Optional)
 
@@ -178,6 +191,7 @@ flutter build ios --release
 
 - **provider**: State management
 - **hive** & **hive_flutter**: Local database
+- **firebase_core** & **firebase_auth**: Authentication (optional)
 - **fl_chart**: Beautiful charts
 - **google_fonts**: Custom typography
 - **intl**: Date formatting
@@ -194,6 +208,13 @@ flutter clean
 flutter pub get
 flutter pub run build_runner build --delete-conflicting-outputs
 ```
+
+### Issue: Firebase not working
+
+**Solution**: 
+- Make sure you've completed Firebase setup
+- Check that `google-services.json` is in the correct location
+- Verify Firebase dependencies in `pubspec.yaml`
 
 ### Issue: App crashes on launch
 

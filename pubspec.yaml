@@ -1,0 +1,57 @@
+name: finance_management_app
+description: A modern Finance Management App built with Flutter
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # Authentication
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.15.3
+  
+  # Charts
+  fl_chart: ^0.66.0
+  
+  # UI & Icons
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.9
+  
+  # Utilities
+  intl: ^0.20.2
+  shared_preferences: ^2.2.2
+  uuid: ^4.2.1
+  
+  # Localization
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+  
+  # Enable localization
+  generate: true
+
